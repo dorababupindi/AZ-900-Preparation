@@ -32,6 +32,19 @@ Ability to adjust resources to meet demand.
 
 ### Types of Scaling
 
+| Aspect | Vertical Scaling (Scale Up / Scale Down) | Horizontal Scaling (Scale Out / Scale In) |
+| --- | --- | --- |
+| **Meaning**: | Increase or decrease power of a single resource | Increase or decrease number of resources |
+| **What changes** | CPU, RAM size | Number of VMs / instances / containers |
+| **Azure term**: | Software as a Service | Scale out / Scale in |
+| **Speed**: | Slower (may require restart) | Faster |
+| **Downtime risk**: | Possible downtime | Usually no downtime |
+| **Limit**: | Has maximum hardware limit | Virtually unlimited |
+| **Cost**: | Increases sharply | Increases gradually |
+| **Best for**: | Small apps, legacy systems | High traffic, cloud-native apps |
+| **High availability**: | Not very ideal | Very good |
+
+
 #### 1. Vertical Scaling (Scale Up / Scale Down)
 - **Meaning**: Increase or decrease power of a single resource
 - **What changes**: CPU, RAM size
