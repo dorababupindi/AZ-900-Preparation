@@ -155,8 +155,8 @@ Azure architecture is divided into:
 
 
 ---
-
-## Datacenters
+## Physical Infrastructure
+### Datacenters
 
 - Datacenters are large buildings with servers
 - Include:
@@ -168,21 +168,21 @@ Azure architecture is divided into:
 
 ---
 
-## Regions
+### Regions
 
 - A **Region** is a geographical area
 - Contains one or more datacenters
 - Datacenters in a region are connected with low-latency networks
 - Azure balances workloads within a region
 
-### Key Points:
+#### Key Points:
 - You choose a region when deploying resources
 - Some services are region-specific
 - Some services are global (no region needed)
 
 ---
 
-## Availability Zones
+### Availability Zones
 
 - Availability Zones are **physically separate datacenters** within a region
 - Each zone has:
@@ -192,13 +192,13 @@ Azure architecture is divided into:
 - Connected by high-speed private fiber networks
 - Minimum of **three zones** in zone-enabled regions
 
-### Purpose:
+#### Purpose:
 - Improve availability
 - Provide fault isolation
 
 ---
 
-## Using Availability Zones
+### Using Availability Zones
 
 - Used for mission-critical applications
 - Resources are duplicated across zones
@@ -207,21 +207,21 @@ Azure architecture is divided into:
 
 ---
 
-## Availability Zone Service Types
+### Availability Zone Service Types
 
-### 1. Zonal Services
+#### 1. Zonal Services
 - Pinned to a specific zone
 - Example:
   - Virtual Machines
   - Managed Disks
 
-### 2. Zone-Redundant Services
+#### 2. Zone-Redundant Services
 - Automatically replicated across zones
 - Example:
   - Zone-redundant storage
   - SQL Database
 
-### 3. Non-Regional Services
+#### 3. Non-Regional Services
 - Always available globally
 - Resilient to zone and region failures
 - Example:
@@ -229,19 +229,19 @@ Azure architecture is divided into:
 
 ---
 
-## Region Pairs
+### Region Pairs
 
 - Two regions paired within the same geography
 - Located at least 300 miles apart
 - Provide disaster recovery
 - Automatic failover in some services
 
-### Benefits:
+#### Benefits:
 - One region prioritized during large outages
 - Updates rolled out one region at a time
 - Data stays within the same geography
 
-### Example Region Pairs:
+#### Example Region Pairs:
 - East US ↔ West US
 - Southeast Asia ↔ East Asia
 
@@ -249,16 +249,134 @@ Azure architecture is divided into:
 
 ---
 
-## Sovereign Regions
+### Sovereign Regions
 
 - Isolated Azure regions
 - Used for legal, compliance, and government needs
 
-### Examples:
+#### Examples:
 - US Government regions
 - China regions (operated with local partners)
 
 ---
 
-## One-Line Exam Summary ⭐
+### One-Line Exam Summary ⭐
 > **Azure physical infrastructure consists of datacenters grouped into regions, availability zones, and region pairs to provide high availability, fault tolerance, and global resiliency.**
+
+
+
+## Azure Management Infrastructure
+
+### Overview
+Azure management infrastructure includes:
+- Resources
+- Resource Groups
+- Subscriptions
+- Management Groups
+
+Understanding this hierarchy helps in planning, security, and cost management.
+
+---
+
+### Azure Resources
+
+- A **resource** is the basic building block in Azure
+- Anything created in Azure is a resource
+
+#### Examples:
+- Virtual Machines (VMs)
+- Databases
+- Virtual Networks
+- App Services
+- Cognitive Services
+
+
+---
+
+### Resource Groups
+
+- A **resource group** is a logical container for resources
+- Every resource must belong to one resource group
+- A resource can belong to only one resource group
+- Resource groups cannot be nested
+
+#### Key Characteristics:
+- Actions on a resource group apply to all resources inside it
+- Deleting a resource group deletes all resources inside it
+- Access control applies to all resources in the group
+
+#### Best Practices:
+- Group resources by lifecycle or access needs
+- Useful for dev/test environments and cleanup
+![Azure resource groups](../Assets/resource-group-eb2d7177-ff67d816.png)
+---
+
+### Azure Subscriptions
+
+- A **subscription** is a unit of:
+  - Management
+  - Billing
+  - Scale
+- Required to use Azure services
+- Linked to an Azure account (Microsoft Entra ID)
+
+#### Subscription Boundaries
+
+##### 1. Billing Boundary
+- Separate invoices per subscription
+- Helps track and manage costs
+
+##### 2. Access Control Boundary
+- Permissions applied at subscription level
+- Useful for separating teams and departments
+
+---
+
+### Reasons to Create Multiple Subscriptions
+
+- Separate environments (Dev / Test / Prod)
+- Reflect organizational structure
+- Manage billing and cost tracking
+- Enforce different access policies
+
+---
+
+### Azure Management Groups
+
+- Management groups provide a level **above subscriptions**
+- Used to manage multiple subscriptions together
+- Policies and access applied at management group level
+- All subscriptions under the group inherit the settings
+- Management groups can be nested
+
+#### Use Cases:
+- Apply governance policies at scale
+- Assign RBAC access across multiple subscriptions
+
+![Sample Heirarachy without management groups](../Assets/account-scope-levels-9ceb3abd-a2d45a13.png)
+![Azure Hierarchy Management groups](../Assets/management-groups-subscriptions-dfd5a108-60f31f5a.png)
+---
+
+### Azure Hierarchy ⭐
+Management Group
+↓
+Subscription
+↓
+Resource Group
+↓
+Resource
+
+
+---
+
+## Important Facts (Exam Points)
+
+- Up to 10,000 management groups per directory
+- Management group hierarchy supports up to 6 levels
+- Each subscription or management group has only one parent
+
+---
+
+## One-Line Exam Summary ⭐
+> **Azure management infrastructure organizes resources using resource groups, subscriptions, and management groups to control access, apply policies, and manage costs at scale.**
+
