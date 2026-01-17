@@ -12,7 +12,7 @@ Delivery of computing services over the internet, including:
 ## Shared Responsibility Model
 (Applies to On-Prem, IaaS, PaaS, SaaS)
 
-![Shared Responsibility Model](../assets/shared-responsibility-b3829bfe.svg)
+![Shared Responsibility Model](../Assets/shared-responsibility-b3829bfe.svg)
 
 ### Cloud Provider is Always Responsible For:
 1. Physical data center
