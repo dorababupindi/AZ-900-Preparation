@@ -308,6 +308,7 @@ Understanding this hierarchy helps in planning, security, and cost management.
 #### Best Practices:
 - Group resources by lifecycle or access needs
 - Useful for dev/test environments and cleanup
+
 ![Azure resource groups](../Assets/resource-group-eb2d7177-ff67d816.png)
 ---
 
@@ -352,8 +353,9 @@ Understanding this hierarchy helps in planning, security, and cost management.
 #### Use Cases:
 - Apply governance policies at scale
 - Assign RBAC access across multiple subscriptions
-
+---
 ![Sample Heirarachy without management groups](../Assets/account-scope-levels-9ceb3abd-a2d45a13.png)
+---
 ![Azure Hierarchy Management groups](../Assets/management-groups-subscriptions-dfd5a108-60f31f5a.png)
 ---
 
