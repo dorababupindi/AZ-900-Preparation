@@ -33,6 +33,17 @@ Delivery of computing services over the internet, including:
 3. **Hybrid Cloud**
 4. **Multi-Cloud**
 
+**Important AZURE product names**
+### ☁️ Azure Arc
+* **What it is:** A bridge that connects "outside" resources to Azure.
+* **Simple Definition:** It lets you manage resources running on-premises, AWS, or Google Cloud as if they were running inside Azure.
+* **Key Benefit:** You get a "single pane of glass" (one screen) to manage everything, no matter where it lives.
+
+### 🖥️ Azure VMware Solution
+* **What it is:** A service that runs your VMware environment inside Azure.
+* **Simple Definition:** Move your on-premise VMware workloads to the cloud without rewriting them or changing how you manage them.
+* **Key Benefit:** "Lift and shift"—keep using the same VMware tools and skills you already have, but get the scalability of the cloud.
+
 ---
 
 ## When to Use Which Cloud Model
