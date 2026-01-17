@@ -31,7 +31,7 @@ Azure provides **Service Level Agreements (SLA)**, represented in percentages.
 Ability to adjust resources to meet demand.
 
 ### Types of Scaling
-
+#### Comparison for Vertical & Horizontal scaling
 | Aspect | Vertical Scaling (Scale Up / Scale Down) | Horizontal Scaling (Scale Out / Scale In) |
 | --- | --- | --- |
 | **Meaning**: | Increase or decrease power of a single resource | Increase or decrease number of resources |
@@ -44,28 +44,6 @@ Ability to adjust resources to meet demand.
 | **Best for**: | Small apps, legacy systems | High traffic, cloud-native apps |
 | **High availability**: | Not very ideal | Very good |
 
-
-#### 1. Vertical Scaling (Scale Up / Scale Down)
-- **Meaning**: Increase or decrease power of a single resource
-- **What changes**: CPU, RAM size
-- **Azure term**: Scale up / Scale down
-- **Speed**: Slower (may require restart)
-- **Downtime risk**: Possible downtime
-- **Limit**: Has maximum hardware limit
-- **Cost**: Increases sharply
-- **Best for**: Small apps, legacy systems
-- **High availability**: Not very ideal
-
-#### 2. Horizontal Scaling (Scale Out / Scale In)
-- **Meaning**: Increase or decrease number of resources
-- **What changes**: Number of VMs / instances / containers
-- **Azure term**: Scale out / Scale in
-- **Speed**: Faster
-- **Downtime risk**: Usually no downtime
-- **Limit**: Virtually unlimited
-- **Traffic handling**: Increases gradually
-- **Best for**: High traffic, cloud-native apps
-- **High availability**: Very good
 
 ---
 
@@ -82,7 +60,8 @@ Ability to adjust resources to meet demand.
 
 ### 1. Performance Predictability
 - App should not slow down when users increase
-- Example: Sudden API spikes
+- Example: 
+    - Sudden API spikes
 - Cloud automatically adds instances
 - Load balancer distributes traffic
 - When traffic drops, instances are removed
