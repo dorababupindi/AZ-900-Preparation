@@ -4,7 +4,7 @@
 ## Different types of cloud services
 - On Premises (**Datacenter**) -> Infrastructure as service (**IaaS**) -> Platform as service (**PaaS**) -> Software as service (**SaaS**)
 
-- Every cloud model has this concept called **Shared Responsibility Model**
+- Every cloud model has this concept called **'Shared Responsibility Model'**
 
 ### Shared Responsibility Model
 
