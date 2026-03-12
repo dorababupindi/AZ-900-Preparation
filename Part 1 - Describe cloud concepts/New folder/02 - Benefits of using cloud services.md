@@ -1,0 +1,81 @@
+# Describe the Benefits of Using Cloud Services
+
+## Two Important Considerations for Any Cloud Application
+1. **Uptime (Availability)**
+2. **Ability to Handle Demand (Scale)**
+
+---
+
+## High Availability
+
+Azure provides **Service Level Agreements (SLA)**, represented in percentages.
+
+### SLA Examples
+
+- **SLA = 100%**
+  - No downtime at all
+  - Ideally **not achievable**
+
+- **SLA = 99%**
+  - Unavailable for **1.68 hours per week**
+  - Or **7.2 hours per month**
+
+- **SLA = 99.9%**
+  - Unavailable for **10 minutes per week**
+  - Or **43.2 minutes per month**
+
+---
+
+## Scalability
+
+Ability to adjust resources to meet demand.
+
+### Types of Scaling
+#### Comparison for Vertical & Horizontal scaling
+| Aspect | Vertical Scaling (Scale Up / Scale Down) | Horizontal Scaling (Scale Out / Scale In) |
+| --- | --- | --- |
+| **Meaning**: | Increase or decrease power of a single resource | Increase or decrease number of resources |
+| **What changes** | CPU, RAM size | Number of VMs / instances / containers |
+| **Azure term**: | Software as a Service | Scale out / Scale in |
+| **Speed**: | Slower (may require restart) | Faster |
+| **Downtime risk**: | Possible downtime | Usually no downtime |
+| **Limit**: | Has maximum hardware limit | Virtually unlimited |
+| **Cost**: | Increases sharply | Increases gradually |
+| **Best for**: | Small apps, legacy systems | High traffic, cloud-native apps |
+| **High availability**: | Not very ideal | Very good |
+
+
+---
+
+## Reliability
+
+- System should **not fall apart when something breaks**
+- Azure regions have **Availability Zones**
+- If **Zone A fails**, traffic shifts to **Zone B**
+- Azure handles this **automatically**
+
+---
+
+## Predictability
+
+### 1. Performance Predictability
+- App should not slow down when users increase
+- Example: 
+    - Sudden API spikes
+- Cloud automatically adds instances
+- Load balancer distributes traffic
+- When traffic drops, instances are removed
+
+### 2. Cost Predictability
+- Identify:
+  - Idle VMs
+  - Oversized SQL Databases
+  - Unused storage
+- Adjust resources **before billing explodes**
+
+### Azure Tools for Predictability
+- Pricing Calculator
+- TCO Calculator
+- Monitoring and Analytics
+
+---
